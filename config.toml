@@ -1,0 +1,36 @@
+# The URL the site will be built for
+base_url = "https://blog.ryand.ca"
+
+title = "Ryan's Blog"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+theme = "after-dark"
+taxonomies = [
+    # You can enable/disable RSS
+    {name = "categories", feed = true},
+    {name = "tags", feed = true},
+]
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[search]
+# Whether to include the title of the page/section in the index
+include_title = true
+
+[extra]
+# Put all your custom variables here
+after_dark_title = "Ryan's Blog"
+after_dark_menu = [
+    {url = "$BASE_URL", name = "Home"},
+    {url = "https://ryand.ca", name = "Back to Main Site"},
+    {url = "$BASE_URL/categories", name = "Categories"},
+    {url = "$BASE_URL/tags", name = "Tags"}
+]
